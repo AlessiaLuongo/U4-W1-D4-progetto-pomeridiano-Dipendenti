@@ -2,7 +2,7 @@ package entities;
 
 import java.util.Random;
 import static entities.Dipartimento.AMMINISTRAZIONE;
-public class Dipendente {
+public abstract class Dipendente {
     private int matricola;
     private double stipendio;
     private String Dipartimento;
@@ -14,6 +14,8 @@ public class Dipendente {
         Dipartimento = String.valueOf(dipartimento);
 
     }
+
+    public abstract int calculateSalary();
 
     public int getMatricola() {
         return matricola;
