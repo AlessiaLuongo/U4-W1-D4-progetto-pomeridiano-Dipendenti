@@ -3,13 +3,13 @@ package entities;
 public class DipendenteFullTime extends Dipendente{
 
 
-    public DipendenteFullTime(double stipendio, entities.Dipartimento dipartimento) {
-        super(stipendio, dipartimento);
+    public DipendenteFullTime( Dipartimento dipartimento) {
+        super( dipartimento);
     }
 
     @Override
-    public int calculateSalary() {
-        return 0;
+    public double calculateSalary() {
+        return (1800);
     }
 }
 

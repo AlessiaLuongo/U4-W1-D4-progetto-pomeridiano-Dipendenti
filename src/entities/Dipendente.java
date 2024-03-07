@@ -5,32 +5,32 @@ import static entities.Dipartimento.AMMINISTRAZIONE;
 public abstract class Dipendente {
     private int matricola;
     private double stipendio;
-    private String Dipartimento;
+    private Dipartimento dipartimento;
 
-    public Dipendente(double stipendio, entities.Dipartimento dipartimento) {
+    public Dipendente( Dipartimento dipartimento) {
         Random matricolaDipendente = new Random();
         this.matricola = matricolaDipendente.nextInt(1,1000);
-        this.stipendio = stipendio;
-        Dipartimento = String.valueOf(dipartimento);
+        this.stipendio = getStipendio();
+        this.dipartimento = dipartimento;
 
     }
 
-    public abstract int calculateSalary();
+    public abstract double calculateSalary();
 
     public int getMatricola() {
         return matricola;
     }
 
     public double getStipendio() {
-        return stipendio;
+        return calculateSalary();
     }
 
-    public String getDipartimento() {
-        return Dipartimento;
+    public Dipartimento getDipartimento() {
+        return dipartimento;
     }
 
     public void setDipartimento(String dipartimento) {
-        Dipartimento = dipartimento;
+        dipartimento = dipartimento;
     }
 
     @Override
@@ -38,7 +38,7 @@ public abstract class Dipendente {
         return "Dipendente{" +
                 "matricola='" + matricola + '\'' +
                 ", stipendio=" + stipendio +
-                ", Dipartimento='" + Dipartimento + '\'' +
+                ", Dipartimento='" + dipartimento + '\'' +
                 '}';
     }
 

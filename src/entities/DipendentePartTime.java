@@ -1,12 +1,14 @@
 package entities;
 
 public class DipendentePartTime extends Dipendente {
-    public DipendentePartTime(double stipendio, entities.Dipartimento dipartimento) {
-        super(stipendio, dipartimento);
+    private int oreLavorative;
+    public DipendentePartTime(Dipartimento dipartimento) {
+        super( dipartimento);
+        this.oreLavorative = 25;
     }
 
     @Override
-    public int calculateSalary() {
-        return 0;
+    public double calculateSalary() {
+        return (5*25*20);
     }
 }

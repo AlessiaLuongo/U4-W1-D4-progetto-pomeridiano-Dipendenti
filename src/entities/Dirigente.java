@@ -1,12 +1,12 @@
 package entities;
 
 public class Dirigente extends Dipendente {
-    public Dirigente(double stipendio, entities.Dipartimento dipartimento) {
-        super(stipendio, dipartimento);
+    public Dirigente( Dipartimento dipartimento) {
+        super( dipartimento);
     }
 
     @Override
-    public int calculateSalary() {
-        return 0;
+    public double calculateSalary() {
+        return   (1800 + (40*100));
     }
 }
