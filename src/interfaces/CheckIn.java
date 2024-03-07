@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface checkIn {
+public interface CheckIn {
     public void checkInAtWork();
 }

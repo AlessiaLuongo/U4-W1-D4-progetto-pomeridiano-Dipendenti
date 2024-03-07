@@ -11,4 +11,9 @@ public class DipendentePartTime extends Dipendente {
     public double calculateSalary() {
         return (5*25*20);
     }
+
+    @Override
+    public void checkInAtWork() {
+        System.out.println("Io lavoro dalle 14 alle 19");
+    }
 }

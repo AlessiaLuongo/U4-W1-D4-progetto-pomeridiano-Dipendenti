@@ -1,8 +1,10 @@
 package entities;
 
+import interfaces.CheckIn;
+
 import java.util.Random;
 import static entities.Dipartimento.AMMINISTRAZIONE;
-public abstract class Dipendente {
+public abstract class Dipendente implements CheckIn {
     private int matricola;
     private double stipendio;
     private Dipartimento dipartimento;

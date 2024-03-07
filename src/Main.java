@@ -38,5 +38,9 @@ public class Main {
 
         Volontario volontario1 = new Volontario("Alessia", 29, "cv mandato per mail");
         System.out.println(volontario1);
+
+        dipendente4.checkInAtWork();
+        volontario1.checkInAtWork();
     }
+
 }
