@@ -1,7 +1,4 @@
-import entities.Dipendente;
-import entities.DipendenteFullTime;
-import entities.DipendentePartTime;
-import entities.Dirigente;
+import entities.*;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -38,5 +35,8 @@ public class Main {
         for (int i = 0; i < arrayDirigenti.length; i++) {
             System.out.println("Sono il Dirigente numero: " + arrayDirigenti[i].getMatricola() + " e il mio salario fisso è di " + arrayDirigenti[i].getStipendio());
         }
+
+        Volontario volontario1 = new Volontario("Alessia", 29, "cv mandato per mail");
+        System.out.println(volontario1);
     }
 }
